@@ -1,0 +1,221 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    color: #000000;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-image: url('../images/bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    top: 0;
+    z-index: 1000;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.container h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+}
+
+.container p {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #666;
+}
+
+nav {
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Remove top padding */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 100px 20px;
+    margin-top: 0; /* Remove top margin to align with the header */
+}
+
+section p {
+    text-align: justify;
+}
+
+#about, #portfolio, #contact {
+    min-height: 5vh;
+}
+
+.funny-sentence {
+    margin-top: -20px; /* Adjust this value as needed */
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Cups Container */
+.cups {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between cups */
+    margin-top: 80px; /* Set the top margin to 80px */
+}
+
+/* Coffee Part */
+.coffee-cup, .energy-cup, .tea-cup {
+    position: relative;
+    width: 100px;
+    height: 200px;
+}
+
+.cup {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    background-color: #d4d4d4;
+    border-radius: 10px 10px 30px 30px;
+    overflow: hidden;
+    border: 0.1px solid #d4d4d4;
+}
+
+.cup::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 130px;
+    background-color: #fff;
+    border-radius: 10px 10px 30px 30px;
+}
+
+.label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff; /* Change text color to white */
+}
+
+.handle {
+    position: absolute;
+    top: 40px;
+    right: -25px;
+    width: 30px;
+    height: 60px;
+    border: 5px solid #d4d4d4;
+    border-radius: 50%;
+    border-left: none;
+    border-bottom: none;
+}
+
+.coffee-liquid {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 80px;
+    height: 80%; /* Cover 80% of the cup */
+    background-color: #6b4f4f;
+    border-radius: 0 0 30px 30px;
+}
+
+.energy-liquid {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 80px;
+    height: 80%; /* Cover 80% of the cup */
+    background-color: #ffcc00;
+    border-radius: 0 0 30px 30px;
+}
+
+.tea-liquid {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 80px;
+    height: 80%; /* Cover 80% of the cup */
+    background-color: #8FBC8F; /* Greener shade */
+    border-radius: 0 0 30px 30px;
+}
+
+.steam {
+    position: absolute;
+    top: -20px;
+    width: 10px;
+    height: 80px; /* Increased height */
+    font-family: monospace;
+    font-size: 14px;
+    animation: steam 3s infinite; /* Longer animation duration */
+}
+
+.tea-cup .steam {
+    color: #8FBC8F; /* Same color as the tea liquid */
+}
+
+.energy-cup .steam {
+    color: #ffcc00; /* Same color as the energy liquid */
+}
+
+.steam1 {
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.steam2 {
+    left: 45px;
+    animation-delay: 0.5s;
+}
+
+.steam3 {
+    left: 70px;
+    animation-delay: 1s;
+}
+
+@keyframes steam {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-60px); /* Higher distance */
+        opacity: 0;
+    }
+}
